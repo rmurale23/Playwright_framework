@@ -1,0 +1,16 @@
+package com.murlee.page.base;
+
+import com.murlee.base.ProjectHooks;
+
+public class ROCPSHooks extends ProjectHooks {
+	
+	
+	public void navigatetoScreen(String parentscreenName,String childScreenName) {
+		click("#navigationLabel","Navigation Search","NA");
+		mouseOver("#navigationLabel",parentscreenName);
+		String locFormatted="#"+childScreenName;
+		click(locFormatted,childScreenName,"NA");
+		
+	}
+
+}

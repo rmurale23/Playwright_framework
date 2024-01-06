@@ -1,0 +1,49 @@
+package com.murlee.page.base;
+
+import com.microsoft.playwright.PlaywrightException;
+import com.murlee.base.ProjectHooks;
+import com.murlee.config.ConfigManager;
+
+public class ROCPSHooks extends ProjectHooks {
+	
+	
+	public  void navigatetoScreen(String screenName) throws InterruptedException {
+		
+		try {
+			/*
+			 * String locparentFormatted="#"+"id-"+parentscreenName; String
+			 * locchildFormatted="#"+"id-"+childScreenName;
+			 * Thread.sleep(ConfigManager.configuration().pauseSLow());
+			 * click("#navigationLabel","Navigation Search","NA");
+			 * Thread.sleep(ConfigManager.configuration().pauseSLow());
+			 * //mouseOver(locparentFormatted,parentscreenName);
+			 * click(locparentFormatted,parentscreenName,"NA");
+			 * Thread.sleep(ConfigManager.configuration().pauseMed());
+			 * click("#Navigation-panel","navigation Panel","NA");
+			 * click(locchildFormatted,childScreenName,"NA");
+			 */
+			
+			click("#navigationLabel","Navigation Search","NA");
+			Thread.sleep(ConfigManager.configuration().pauseSLow());
+			type("[placeholder=\"Type to search\"]",screenName, "Event Statistics Screen");
+			Thread.sleep(ConfigManager.configuration().pauseMed());
+			getPage().keyboard().press("ArrowDown+Enter");
+			Thread.sleep(ConfigManager.configuration().pauseMed());
+	
+			if (getPage().locator("#filterpanel-header-label").innerText().contains(screenName)) {
+				
+				ReportStep("Successfully launched the screen -"+screenName, "pass");
+			}
+			else {
+			ReportStep("Unable to Open the screen -"+screenName, "fail");
+			}
+			
+			
+		}
+		catch (PlaywrightException e) {
+			ReportStep("PlaywrightException : \n" + e.getMessage(), "fail");
+		}
+		
+	}
+
+}

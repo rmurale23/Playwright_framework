@@ -1,0 +1,15 @@
+package com.murlee.test;
+
+import org.testng.annotations.BeforeTest;
+
+public class TC02NavigateToScreen extends ROCPSHooks {
+	
+	@BeforeTest
+	public void setReportValues() {
+		testName = "TC01 - Login to ROCPS Application";
+		testDescription = "Login to ROCPS with Root credentials";
+		authors = "Rahul Murlee";
+		category = "Login Management";
+	}
+
+}

@@ -1,0 +1,6 @@
+com\murlee\config\Configuration.class
+com\murlee\base\HTMLReporter.class
+com\murlee\base\ProjectHooks.class
+com\murlee\config\ConfigManager.class
+com\murlee\base\DriverFactory.class
+com\murlee\base\PlaywrightWrapper.class

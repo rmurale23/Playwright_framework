@@ -1,0 +1,9 @@
+browser=firefox
+base.url=http://localhost:8080/psro/sparkLogin.jsp
+app.timeout=10000
+headless.mode= false
+report.Theme=dark
+report.Title=Murlee's Report
+report.Name=Murlee's PlayWright Report
+auto.login=NA
+enable.tracing=true;
