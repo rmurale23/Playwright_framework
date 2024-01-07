@@ -6,7 +6,7 @@
  </listeners>
   <test name="My Login">
     <classes>
-  <!--   <class name="com.murlee.test.LoginToAppTC01"/> -->
+  		<class name="com.murlee.test.LoginToAppTC01"/> 
         <class name="com.murlee.test.TC02NavigateToScreen"/>
     </classes>
   </test> <!-- Test -->

@@ -2,15 +2,18 @@ package com.murlee.base;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReporter;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.murlee.config.ConfigManager;
+import com.murlee.utility.MediaEntityBuilder;
 
 public class HTMLReporter extends DriverFactory{
 	
@@ -80,25 +83,35 @@ public synchronized  void endResult() {
 }
 
 
+public void ReportStep(String desc, String status) {
+	ReportStep(desc, status, true);
+}
+
 	
-public void ReportStep(String description,String status) {
+public void ReportStep(String description,String status,boolean bSnap) {
 	
 	synchronized(test) {
+		
+		// Start reporting the step and snapshot
+		MediaEntityModelProvider img = null;
+		if (bSnap && !(status.equalsIgnoreCase("INFO") || status.equalsIgnoreCase("skipped"))) {
+			img = MediaEntityBuilder.createScreenCapture(new String(Base64.getEncoder().encode(getPage().screenshot())),"Snap",true).build();
+		}
 	
 	if (status.equalsIgnoreCase("Pass")) {
-		test.get().pass(description);
+		test.get().pass(description,img);
 	}
 	
 	if (status.equalsIgnoreCase("Fail")) {
-		test.get().fail(description);
+		test.get().fail(description,img);
 	}
 	
 	if (status.equalsIgnoreCase("Warn")) {
-		test.get().warning(description);
+		test.get().warning(description,img);
 	}
 	
 	if (status.equalsIgnoreCase("Info")) {
-		test.get().info(description);
+		test.get().info(description,img);
 	}
 	}
 }

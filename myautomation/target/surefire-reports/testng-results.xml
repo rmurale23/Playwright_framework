@@ -1,37 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-06T15:12:01 IST" name="Murlee&#039;s ROCPS" finished-at="2024-01-06T15:12:40 IST" duration-ms="38617">
+  <suite started-at="2024-01-07T12:48:56 IST" name="Murlee&#039;s ROCPS" finished-at="2024-01-07T12:50:00 IST" duration-ms="64259">
     <groups>
     </groups>
-    <test started-at="2024-01-06T15:12:01 IST" name="My Login" finished-at="2024-01-06T15:12:40 IST" duration-ms="38617">
+    <test started-at="2024-01-07T12:48:56 IST" name="My Login" finished-at="2024-01-07T12:50:00 IST" duration-ms="64259">
       <class name="com.murlee.test.TC02NavigateToScreen">
-        <test-method is-config="true" signature="initSuite()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@2b6faea6]" started-at="2024-01-06T15:12:01 IST" name="initSuite" finished-at="2024-01-06T15:12:01 IST" duration-ms="124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSuite -->
-        <test-method is-config="true" signature="setReportValues()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@2b6faea6]" started-at="2024-01-06T15:12:01 IST" name="setReportValues" finished-at="2024-01-06T15:12:01 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setReportValues()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@794cb805]" started-at="2024-01-07T12:48:56 IST" name="setReportValues" finished-at="2024-01-07T12:48:56 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setReportValues -->
-        <test-method is-config="true" signature="startTestCaseReporting()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@2b6faea6]" started-at="2024-01-06T15:12:01 IST" name="startTestCaseReporting" finished-at="2024-01-06T15:12:01 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="startTestCaseReporting()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@794cb805]" started-at="2024-01-07T12:49:22 IST" name="startTestCaseReporting" finished-at="2024-01-07T12:49:22 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTestCaseReporting -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@2b6faea6]" started-at="2024-01-06T15:12:01 IST" name="init" finished-at="2024-01-06T15:12:07 IST" duration-ms="5532" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@794cb805]" started-at="2024-01-07T12:49:22 IST" name="init" finished-at="2024-01-07T12:49:25 IST" duration-ms="2844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="NavigateToROCPS()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@2b6faea6]" started-at="2024-01-06T15:12:07 IST" name="NavigateToROCPS" finished-at="2024-01-06T15:12:39 IST" duration-ms="32637" status="PASS">
+        <test-method signature="NavigateToROCPS()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@794cb805]" started-at="2024-01-07T12:49:25 IST" name="NavigateToROCPS" finished-at="2024-01-07T12:50:00 IST" duration-ms="34891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NavigateToROCPS -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@2b6faea6]" started-at="2024-01-06T15:12:39 IST" name="tearDown" finished-at="2024-01-06T15:12:40 IST" duration-ms="421" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.murlee.test.TC02NavigateToScreen@794cb805]" started-at="2024-01-07T12:50:00 IST" name="tearDown" finished-at="2024-01-07T12:50:00 IST" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.murlee.test.TC02NavigateToScreen -->
+      <class name="com.murlee.test.LoginToAppTC01">
+        <test-method is-config="true" signature="initSuite()[pri:0, instance:com.murlee.test.LoginToAppTC01@1f0f1111]" started-at="2024-01-07T12:48:56 IST" name="initSuite" finished-at="2024-01-07T12:48:56 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSuite -->
+        <test-method is-config="true" signature="setReportValues()[pri:0, instance:com.murlee.test.LoginToAppTC01@1f0f1111]" started-at="2024-01-07T12:48:56 IST" name="setReportValues" finished-at="2024-01-07T12:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setReportValues -->
+        <test-method is-config="true" signature="startTestCaseReporting()[pri:0, instance:com.murlee.test.LoginToAppTC01@1f0f1111]" started-at="2024-01-07T12:48:56 IST" name="startTestCaseReporting" finished-at="2024-01-07T12:48:56 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTestCaseReporting -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.murlee.test.LoginToAppTC01@1f0f1111]" started-at="2024-01-07T12:48:56 IST" name="init" finished-at="2024-01-07T12:49:02 IST" duration-ms="5740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="logintoROCPS()[pri:0, instance:com.murlee.test.LoginToAppTC01@1f0f1111]" started-at="2024-01-07T12:49:02 IST" name="logintoROCPS" finished-at="2024-01-07T12:49:22 IST" duration-ms="20077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintoROCPS -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.murlee.test.LoginToAppTC01@1f0f1111]" started-at="2024-01-07T12:49:22 IST" name="tearDown" finished-at="2024-01-07T12:49:22 IST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.murlee.test.LoginToAppTC01 -->
     </test> <!-- My Login -->
   </suite> <!-- Murlee's ROCPS -->
 </testng-results>

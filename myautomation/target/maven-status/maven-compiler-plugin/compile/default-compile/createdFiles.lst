@@ -1,6 +1,9 @@
 com\murlee\config\Configuration.class
+com\murlee\utility\MediaEntityBuilder$MediaBuilderInstance.class
 com\murlee\base\HTMLReporter.class
 com\murlee\base\ProjectHooks.class
+com\murlee\utility\MediaEntityBuilder$1.class
 com\murlee\config\ConfigManager.class
 com\murlee\base\DriverFactory.class
+com\murlee\utility\MediaEntityBuilder.class
 com\murlee\base\PlaywrightWrapper.class
