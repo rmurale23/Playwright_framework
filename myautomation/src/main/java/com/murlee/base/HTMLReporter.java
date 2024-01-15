@@ -22,7 +22,7 @@ public class HTMLReporter extends DriverFactory{
 	private static ThreadLocal<ExtentTest> test=new ThreadLocal<ExtentTest>();
 	private static ThreadLocal<String> testCaseName=new ThreadLocal<String>();
 	
-	public String testName,testDescription,authors,category;
+	public String testName,testDescription,authors,category,datafilename;
 	private static final String repName="myReport.html";
 	private static String pattern = "dd-MMM-yyyy HH-mm-ss";
 	public static String folderName = "";

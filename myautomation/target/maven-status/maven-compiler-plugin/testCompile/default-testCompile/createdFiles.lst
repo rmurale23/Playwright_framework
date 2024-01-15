@@ -1,4 +1,5 @@
 com\murlee\page\base\ROCPSHooks.class
 com\murlee\test\TC02NavigateToScreen.class
+com\murlee\test\TC03NavigatoAllScreensinROCPS.class
 com\murlee\test\LoginToAppTC01.class
 com\murlee\page\base\LoginPage.class

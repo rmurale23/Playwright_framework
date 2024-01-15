@@ -1,0 +1,77 @@
+package com.murlee.helpers;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+public class ROCScreenList {
+	
+	String toolbar,toolbaritem;
+
+	
+	
+	public static List<ROCScreenList> excelDataToListOfObjets_withApachePOI(String fileLocation)
+			  throws IOException {
+			    FileInputStream file = new FileInputStream(new File(fileLocation));
+			    XSSFWorkbook workbook = new XSSFWorkbook(file);
+			    XSSFSheet sheet = workbook.getSheetAt(0);
+			    List<ROCScreenList> rocpsdata = new ArrayList<ROCScreenList>();
+			    DataFormatter dataFormatter = new DataFormatter();
+			    for (int n = 1; n < sheet.getPhysicalNumberOfRows(); n++) {
+			        XSSFRow row = sheet.getRow(n);
+			        ROCScreenList rocpsscreeenlist = new ROCScreenList();
+			        int i = row.getFirstCellNum();
+
+			        rocpsscreeenlist.setToolbar(dataFormatter.formatCellValue(row.getCell(i)));
+			        rocpsscreeenlist.setToolbaritem(dataFormatter.formatCellValue(row.getCell(++i)));
+			       
+			        rocpsdata.add(rocpsscreeenlist);
+			    }
+			    return rocpsdata;
+			}
+	
+	
+	public String getToolbar() {
+		return toolbar;
+	}
+
+	public void setToolbar(String toolbar) {
+		this.toolbar = toolbar;
+	}
+
+	public String getToolbaritem() {
+		return toolbaritem;
+	}
+
+	public void setToolbaritem(String toolbaritem) {
+		this.toolbaritem = toolbaritem;
+	}
+	
+	
+
+	
+	@Test
+	public void testmyList() throws IOException {
+		String fileLocation=System.getProperty("user.dir")+"\\data\\ROCPS_ScreenList.xlsx";
+		List<ROCScreenList> myList=ROCScreenList.excelDataToListOfObjets_withApachePOI(fileLocation);
+		
+		System.out.println(myList.size());
+		
+		System.out.println(myList.get(0).getToolbar());
+		System.out.println(myList.get(0).getToolbaritem());
+		System.out.println(myList.get(2).getToolbaritem());
+		System.out.println(myList.get(4).getToolbaritem());
+		System.out.println(myList.get(3).getToolbar());
+	}
+	
+	
+	
+}

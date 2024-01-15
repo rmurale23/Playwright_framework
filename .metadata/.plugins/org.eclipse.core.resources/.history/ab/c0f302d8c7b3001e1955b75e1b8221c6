@@ -1,0 +1,25 @@
+package com.murlee.helpers;
+
+public class ROCScreenList {
+	
+	String toolbar,toolbaritem;
+
+	public String getToolbar() {
+		return toolbar;
+	}
+
+	public void setToolbar(String toolbar) {
+		this.toolbar = toolbar;
+	}
+
+	public String getToolbaritem() {
+		return toolbaritem;
+	}
+
+	public void setToolbaritem(String toolbaritem) {
+		this.toolbaritem = toolbaritem;
+	}
+	
+	
+
+}
