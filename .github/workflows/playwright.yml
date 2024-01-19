@@ -13,11 +13,7 @@ jobs:
     - uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '17'
-
-    - name: Setting Working Directory
-      run:  cd /myautomation
-      working-directory: /myautomation      
+        java-version: '17'  
     - name: Build & Install
       run:  mvn -B install -D skipTests --no-transfer-progress
     - name: Install Playwright
