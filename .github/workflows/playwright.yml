@@ -14,9 +14,12 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-    - name: Build & Install
+
+    - name: Setting Working Directory
       run:  cd /myautomation
-            mvn -B install -D skipTests --no-transfer-progress
+      working-directory: /myautomation      
+    - name: Build & Install
+      run:  mvn -B install -D skipTests --no-transfer-progress
     - name: Install Playwright
       run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
     - name: Run tests
