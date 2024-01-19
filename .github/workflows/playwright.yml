@@ -16,7 +16,7 @@ jobs:
         java-version: '17'
     - name: Build & Install
       run: cd ../Playwright_framework/myautomation
-      run: mvn -B install -D skipTests --no-transfer-progress
+           mvn -B install -D skipTests --no-transfer-progress
     - name: Install Playwright
       run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
     - name: Run tests
