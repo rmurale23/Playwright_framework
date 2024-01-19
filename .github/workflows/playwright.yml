@@ -15,8 +15,8 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
     - name: Setting working Directory 
-      run: cd ../Playwright_framework/myautomation
-      working-directory: ../Playwright_framework/myautomation
+      run: cd /myautomation
+      working-directory: /myautomation
     - name: Build & Install
       run: mvn -B install -D skipTests --no-transfer-progress
     - name: Install Playwright
