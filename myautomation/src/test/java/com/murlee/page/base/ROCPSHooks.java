@@ -1,5 +1,6 @@
 package com.murlee.page.base;
 
+import com.microsoft.playwright.Dialog;
 import com.microsoft.playwright.PlaywrightException;
 import com.murlee.base.ProjectHooks;
 import com.murlee.config.ConfigManager;
@@ -18,6 +19,12 @@ public class ROCPSHooks extends ProjectHooks {
 			Thread.sleep(ConfigManager.configuration().pauseSLow());
 			getPage().keyboard().press("ArrowDown+Enter");
 			Thread.sleep(ConfigManager.configuration().pauseSLow());
+			
+			if (getPage().locator("text=OK").isVisible())
+			{
+				getPage().locator("text=OK").click();
+			}
+						
 			if (screenName.length()>19) {
 				frmtdScreenName=screenName.substring(0, 19);
 			}
