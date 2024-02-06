@@ -18,7 +18,7 @@ public class LoginToAppTC01 extends ProjectHooks {
 		category = "Login Management";
 	}
 		
-	@Test
+	@Test(retryAnalyzer = com.murlee.utility.CustomeTestListner.class)
 	public void logintoROCPS() throws InterruptedException {
 		
 		new LoginPage().doLogin();
