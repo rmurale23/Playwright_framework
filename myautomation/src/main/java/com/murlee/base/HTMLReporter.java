@@ -22,8 +22,8 @@ public class HTMLReporter extends DriverFactory{
 	private static ThreadLocal<ExtentTest> test=new ThreadLocal<ExtentTest>();
 	private static ThreadLocal<String> testCaseName=new ThreadLocal<String>();
 	
-	public String testName,testDescription,authors,category,datafilename;
-	private static final String repName="myReport.html";
+	public String testName,testDescription,authors,category,datafilename,finalRepname;
+	private static final String repName="myReport_{date}.html";
 	private static String pattern = "dd-MMM-yyyy HH-mm-ss";
 	public static String folderName = "";
 	public static final String automationPath = System.getProperty("user.dir");
@@ -32,11 +32,12 @@ public class HTMLReporter extends DriverFactory{
 	public String createDirectory(String dirName) {
 		
 		String date = new SimpleDateFormat(pattern).format(new Date());
-		dirName = dirName+"\\" + date;	
+		//dirName = dirName+"\\" + date;	
 		File file=new File(automationPath+"\\"+dirName);
 		
 		if (!file.exists()) {
 			file.mkdir();
+			finalRepname=repName.replace("{date}", date);
 			
 		}
 		return dirName;
@@ -47,7 +48,7 @@ public class HTMLReporter extends DriverFactory{
 	
 	public synchronized void startReport() {
 		folderName = createDirectory("reports");
-		ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter(automationPath+"\\"+ folderName + "\\" + repName);
+		ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter(automationPath+"\\"+ folderName + "\\" + finalRepname);
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 		htmlReporter.config().setChartVisibilityOnOpen(!true);
 		htmlReporter.config().setTheme(Theme.STANDARD);
