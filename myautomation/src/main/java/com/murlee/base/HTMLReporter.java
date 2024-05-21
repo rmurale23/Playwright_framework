@@ -37,9 +37,10 @@ public class HTMLReporter extends DriverFactory{
 		
 		if (!file.exists()) {
 			file.mkdir();
-			finalRepname=repName.replace("{date}", date);
+			
 			
 		}
+		finalRepname=repName.replace("{date}", date);
 		return dirName;
 				
 	}
