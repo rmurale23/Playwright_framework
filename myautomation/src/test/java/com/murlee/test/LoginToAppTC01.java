@@ -1,5 +1,6 @@
 package com.murlee.test;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,10 +24,7 @@ public class LoginToAppTC01 extends ProjectHooks {
 		
 		new LoginPage().doLogin();
 		
-	
 	}
-	
-	
-	
+
 
 }

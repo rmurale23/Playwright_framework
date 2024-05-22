@@ -3,6 +3,7 @@ package com.murlee.base;
 import java.nio.file.Paths;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -11,6 +12,7 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Browser.NewContextOptions;
 import com.microsoft.playwright.Tracing;
 import com.murlee.config.ConfigManager;
+import com.murlee.utility.EmailUtility;
 
 public class ProjectHooks extends PlaywrightWrapper{
 	
@@ -79,7 +81,7 @@ public class ProjectHooks extends PlaywrightWrapper{
 		getPage().close();
 		getBrowserContext().close();
 		getPlaywright().close();
-		endResult();
+		endResult();		
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -87,6 +89,13 @@ public class ProjectHooks extends PlaywrightWrapper{
 	
 	}
 	
+	@AfterSuite(alwaysRun = true)
+	public void afterSuite() throws Exception {
+		if (ConfigManager.configuration().getEmailReqFlag().equalsIgnoreCase("y")) {
+			EmailUtility emailUntilityObj=new EmailUtility();
+			emailUntilityObj.sendMail();
+		}
+	}
 	
 
 }
