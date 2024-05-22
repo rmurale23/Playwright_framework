@@ -19,6 +19,7 @@
 		<owner.version>1.0.12</owner.version>
 		<extent.version>3.1.5</extent.version>
 		<ashotimageio.version>1.5.4</ashotimageio.version>
+		<javaxmail.version>1.4.7</javaxmail.version>
 		<suite>local</suite>
 	</properties>
   
@@ -75,6 +76,12 @@
 		    <groupId>ru.yandex.qatools.ashot</groupId>
 		    <artifactId>ashot</artifactId>
 		    <version>${ashotimageio.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>${javaxmail.version}</version>
 		</dependency>
 	</dependencies>
 	<build>

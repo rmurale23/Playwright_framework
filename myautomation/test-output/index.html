@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Murlee_s_ROCPS" class="navigator-link ">
-                    <span>C:\PlayWright_Java_Workspace\Playwright_framework\myautomation\testng.xml</span>
+                    <span>C:\Temp_Rahul\Playwright_Framwork_Workspace\PL_Code\Playwright_framework\myautomation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Murlee_s_ROCPS">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Murlee_s_ROCPS" title="com.murlee.test.TC03NavigatoAllScreensinROCPS" class="method navigator-link" hash-for-method="NavigateToROCPS">NavigateToROCPS</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Murlee_s_ROCPS" title="com.murlee.test.LoginToAppTC01" class="method navigator-link" hash-for-method="logintoROCPS">logintoROCPS</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Murlee_s_ROCPS -->
@@ -122,14 +122,14 @@
           <div class="suite-Murlee_s_ROCPS-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.murlee.test.TC03NavigatoAllScreensinROCPS</span>
+              <span class="class-name">com.murlee.test.LoginToAppTC01</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="NavigateToROCPS">
-                  </a> <!-- NavigateToROCPS -->
-                  <span class="method-name">NavigateToROCPS</span>
+                  <a name="logintoROCPS">
+                  </a> <!-- logintoROCPS -->
+                  <span class="method-name">logintoROCPS</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,16 +137,19 @@
         </div> <!-- panel Murlee_s_ROCPS -->
         <div panel-name="test-xml-Murlee_s_ROCPS" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\PlayWright_Java_Workspace\Playwright_framework\myautomation\testng.xml</span>
+            <span class="header-content">C:\Temp_Rahul\Playwright_Framwork_Workspace\PL_Code\Playwright_framework\myautomation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;Murlee&amp;#039;s ROCPS&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.murlee.utility.CustomeTestListner&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;My Login&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.murlee.test.TC03NavigatoAllScreensinROCPS&quot;/&gt;
+      &lt;class name=&quot;com.murlee.test.LoginToAppTC01&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- My Login --&gt;
 &lt;/suite&gt; &lt;!-- Murlee&apos;s ROCPS --&gt;
@@ -188,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'NavigateToROCPS')
-data.setCell(0, 2, 'com.murlee.test.TC03NavigatoAllScreensinROCPS')
-data.setCell(0, 3, 108495);
+data.setCell(0, 1, 'logintoROCPS')
+data.setCell(0, 2, 'com.murlee.test.LoginToAppTC01')
+data.setCell(0, 3, 20623);
 window.suiteTableData['Murlee_s_ROCPS']= { tableData: data, tableDiv: 'times-div-Murlee_s_ROCPS'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Murlee_s_ROCPS">
               </div> <!-- times-div-Murlee_s_ROCPS -->
             </div> <!-- times-div -->
@@ -221,31 +224,37 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.murlee.test.TC03NavigatoAllScreensinROCPS</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.murlee.test.LoginToAppTC01</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">initSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setReportValues</span>
-                <span class="method-start">176 ms</span>
+                <span class="method-start">218 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">startTestCaseReporting</span>
-                <span class="method-start">187 ms</span>
+                <span class="method-start">229 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">init</span>
-                <span class="method-start">202 ms</span>
+                <span class="method-start">247 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">NavigateToROCPS</span>
-                <span class="method-start">11335 ms</span>
+                <span class="method-name">logintoROCPS</span>
+                <span class="method-start">5754 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">119833 ms</span>
+                <span class="method-start">26580 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">27186 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

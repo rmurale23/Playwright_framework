@@ -59,4 +59,18 @@ public interface Configuration extends Config{
 	@Key("pause.high")
 	long pauseHigh();
 	
+	@Key("email.userName")
+	String getEmailUserName();
+	
+	@Key("email.password")
+	String getEmailPassword();
+
+	@Key("toemail.username")
+	String getToEmailUserName();
+	
+	@Key("email.required")
+	String getEmailReqFlag();
+	
+	@Key("email.host")
+	String getEmailHost();
 }
