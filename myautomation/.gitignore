@@ -1,4 +1,9 @@
 /target/
-.settings/
+
+../metadata
+
+# Eclipse files
+.project
 .classpath
-.metadata
+.settings/
+
