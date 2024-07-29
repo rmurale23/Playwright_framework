@@ -20,7 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Setting Working Directory
-        run: cd /myautomation
+        run: ls -la
         working-directory: ./myautomation
 
       - name: Build & Install
