@@ -21,7 +21,7 @@ jobs:
 
       - name: Setting Working Directory
         run: echo "Setting working directory to /myautomation"
-        working-directory: ./Playwright_framework/myautomation
+        working-directory: ./myautomation
 
       - name: Build & Install
         run: mvn -B install -D skipTests --no-transfer-progress
