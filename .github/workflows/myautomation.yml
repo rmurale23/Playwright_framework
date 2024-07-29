@@ -20,8 +20,8 @@ jobs:
           java-version: '17'
 
       - name: Setting Working Directory
-        run: ls -la
-        working-directory: ./myautomation
+        run: pwd
+        working-directory: .
 
       - name: Build & Install
         run: mvn -B install -D skipTests --no-transfer-progress
