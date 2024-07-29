@@ -21,17 +21,17 @@ jobs:
 
       - name: Setting Working Directory
         run: echo "Setting working directory to /myautomation"
-        working-directory: /myautomation
+        working-directory: ./Playwright_framework/myautomation
 
       - name: Build & Install
         run: mvn -B install -D skipTests --no-transfer-progress
-        working-directory: /myautomation
+        
 
       - name: Install Playwright
         run: |
           mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
-        working-directory: /myautomation
+        
 
       - name: Run tests
         run: mvn test
-        working-directory: /myautomation
+       
